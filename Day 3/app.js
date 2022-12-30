@@ -1,5 +1,6 @@
 const express = require('express');
-const { create } = require('lodash');
+//const { create } = require('lodash');
+const morgan = require('morgan')
 
 const app = express();
 
@@ -7,6 +8,25 @@ const app = express();
 app.set('view engine', 'ejs');
 //listening for requests
 app.listen(3000);
+
+//middleware static files
+
+app.use(express.static('public'));
+
+app.use(morgan('dev'));
+
+app.use((req, res, next) => {
+    console.log('new request made');
+    console.log('host: ', req.hostname);
+    console.log('path: ', req.path);
+    console.log('method: ', req.method);
+    next();
+});
+
+app.use((req, res, next) => {
+    console.log('In the next Middleware');
+    next();
+});
 
 app.get('/', (req,res)=>{
     const blogs = [
