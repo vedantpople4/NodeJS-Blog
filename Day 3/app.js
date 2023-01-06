@@ -9,7 +9,7 @@ const blogRoutes = require('./routes/blogRoutes');
 const app = express();
 
 //chnage username/password string
-const dbURI = 'mongodb+srv://vedantpople:Vedanty%40143@node.xrgibh4.mongodb.net/node?retryWrites=true&w=majority'
+const dbURI = 'mongodb+srv://<username>:<password>@node.xrgibh4.mongodb.net/node?retryWrites=true&w=majority'
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then((result)=> console.log('CONNECTED to Db'))
     .catch((err) => console.log(err));
