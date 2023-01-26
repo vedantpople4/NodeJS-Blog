@@ -20,3 +20,5 @@ TO SETUP:
 4. Install other libraries from node modules folder $npm install <package-name>
 5. Use $node app.js to  start the server and run the project
 6. Open localhost:3000 in your browser to see the webpage
+
+The project can be followed using the video tutorial [link](https://www.youtube.com/watch?v=zb3Qk8SG5Ms&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&ab_channel=TheNetNinja)
